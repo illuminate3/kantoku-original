@@ -2,7 +2,7 @@
 
 {{-- Web site Title --}}
 @section('title')
-{{ Lang::choice('kotoba::cms.theme', 2) }} :: @parent
+{{ Lang::choice('kotoba::cms.module', 2) }} :: @parent
 @stop
 
 @section('styles')
@@ -30,13 +30,13 @@ oTable =
 <div class="row">
 <h1>
 	<i class="fa fa-gears fa-lg"></i>
-		{{ trans('kotoba::general.active') }}:&nbsp;{{ $activeTheme }}
+		{{ trans('kotoba::general.active') }}:&nbsp;{{-- $activeModule --}}
 	<hr>
 </h1>
 </div>
 
 
-@if (count($collection))
+@if (count($modules))
 
 <div class="row">
 <table id="table" class="table table-striped table-hover">
@@ -44,22 +44,24 @@ oTable =
 		<tr>
 			<th>{{ trans('kotoba::table.name') }}</th>
 			<th>{{ trans('kotoba::table.slug') }}</th>
-			<th>{{ trans('kotoba::table.author') }}</th>
 			<th>{{ trans('kotoba::table.description') }}</th>
 			<th>{{ trans('kotoba::table.version') }}</th>
+			<th>{{ trans('kotoba::table.enabled') }}</th>
+			<th>{{ trans('kotoba::table.order') }}</th>
 			<th>{{ Lang::choice('kotoba::table.action', 2) }}</th>
 		</tr>
 	</thead>
 	<tbody>
-		@foreach ($themes as $theme)
+		@foreach ($modules as $module)
 			<tr>
-				<td>{{ $collection[$theme]['name'] }}</td>
-				<td>{{ $collection[$theme]['slug'] }}</td>
-				<td>{{ $collection[$theme]['author'] }}</td>
-				<td>{{ $collection[$theme]['description'] }}</td>
-				<td>{{ $collection[$theme]['version'] }}</td>
+				<td>{{ $module['name'] }}</td>
+				<td>{{ $module['slug'] }}</td>
+				<td>{{ $module['description'] }}</td>
+				<td>{{ $module['version'] }}</td>
+				<td>{{ $module['enabled'] }}</td>
+				<td>{{ $module['order'] }}</td>
 				<td>
-					<a href="/admin/themes/{{ $collection[$theme]['slug'] }}" class="btn btn-primary" title="{{ trans('kotoba::button.edit') }}">
+					<a href="/admin/modules/{{ $module['slug'] }}" class="btn btn-primary" title="{{ trans('kotoba::button.edit') }}">
 						<i class="fa fa-pencil fa-fw"></i>
 						{{ trans('kotoba::button.edit') }}
 					</a>

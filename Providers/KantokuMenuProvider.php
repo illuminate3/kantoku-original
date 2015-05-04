@@ -21,7 +21,7 @@ class KantokuMenuProvider extends MenuServiceProvider {
 
 // right side drop down
 		$menu = Menu::get('admin');
-		$menu->add('Themes', 'admin/themes');
+		$menu->add('Modules', 'admin/modules');
 
 	}
 

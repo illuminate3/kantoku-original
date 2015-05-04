@@ -4,14 +4,14 @@ namespace App\Modules\Kantoku\Http\Requests;
 use Illuminate\Foundation\Http\FormRequest;
 use Config;
 
-class ThemeUpdateRequest extends FormRequest {
+class ModuleCreateRequest extends FormRequest {
 
 	/**
-	 * Determine if the user is authorized to make this request.
+	 * Determine if the user is orderized to make this request.
 	 *
 	 * @return bool
 	 */
-	public function authorize()
+	public function orderize()
 	{
 		return true;
 	}

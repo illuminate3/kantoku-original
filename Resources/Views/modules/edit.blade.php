@@ -2,7 +2,7 @@
 
 {{-- Web site Title --}}
 @section('title')
-{{ Lang::choice('kotoba::cms.theme', 1) }} :: @parent
+{{ Lang::choice('kotoba::cms.module', 1) }} :: @parent
 @stop
 
 @section('styles')
@@ -21,13 +21,13 @@
 <div class="row">
 <h1>
 	<p class="pull-right">
-	<a href="/admin/themes" class="btn btn-default" title="{{ trans('kotoba::button.back') }}">
+	<a href="/admin/modules" class="btn btn-default" title="{{ trans('kotoba::button.back') }}">
 		<i class="fa fa-chevron-left fa-fw"></i>
 		{{ trans('kotoba::button.back') }}
 	</a>
 	</p>
 	<i class="fa fa-edit fa-lg"></i>
-		{{ trans('kotoba::general.command.edit') }}:&nbsp;{{ Lang::choice('kotoba::cms.theme', 1) }}
+		{{ trans('kotoba::general.command.edit') }}:&nbsp;{{ Lang::choice('kotoba::cms.module', 1) }}
 	<hr>
 </h1>
 </div>
@@ -35,9 +35,9 @@
 
 <div class="row">
 {!! Form::open([
-	'route' => array('themes.update', $slug)
+	'route' => array('modules.update', $slug)
 ]) !!}
-{!! Form::hidden('activeTheme', $activeTheme) !!}
+{{-- Form::hidden('activeModule', $activeModule) --}}
 
 <div class="form-group">
 <div class="input-group">
@@ -56,13 +56,6 @@
 <div class="form-group">
 <div class="input-group">
 	<span class="input-group-addon"><i class="fa fa-gavel fa-fw"></i></span>
-		<input type="text" id="author" name="author" value="{{ $author }}" placeholder="{{ trans('kotoba::general.author') }}" class="form-control">
-</div>
-</div>
-
-<div class="form-group">
-<div class="input-group">
-	<span class="input-group-addon"><i class="fa fa-gavel fa-fw"></i></span>
 		<input type="text" id="description" name="description" value="{{ $description }}" placeholder="{{ trans('kotoba::general.description') }}" class="form-control">
 </div>
 </div>
@@ -71,6 +64,13 @@
 <div class="input-group">
 	<span class="input-group-addon"><i class="fa fa-gavel fa-fw"></i></span>
 		<input type="text" id="version" name="version" value="{{ $version }}" placeholder="{{ trans('kotoba::general.version') }}" class="form-control">
+</div>
+</div>
+
+<div class="form-group">
+<div class="input-group">
+	<span class="input-group-addon"><i class="fa fa-gavel fa-fw"></i></span>
+		<input type="text" id="order" name="order" value="{{ $order }}" placeholder="{{ trans('kotoba::general.order') }}" class="form-control">
 </div>
 </div>
 

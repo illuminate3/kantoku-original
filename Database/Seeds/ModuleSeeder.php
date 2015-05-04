@@ -14,7 +14,7 @@ class ModuleSeeder extends Seeder {
 			'name'					=> 'Kantoku',
 			'slug'					=> 'kantoku',
 			'version'				=> '1.0',
-			'description'			=> 'Kantoku is a Rakko module that provides simple Theme Managent ability',
+			'description'			=> 'Kantoku is a Rakko module that provides simple Module Managent ability',
 			'enabled'				=> 1,
 			'order'					=> 0
 		);
@@ -30,9 +30,9 @@ class ModuleSeeder extends Seeder {
 // Permission Information
 		$permissions = array(
 			[
-				'name'				=> 'Manage Themes',
+				'name'				=> 'Manage Modules',
 				'slug'				=> 'manage_kantoku',
-				'description'		=> 'Give permission to user to access the Theme Management area.'
+				'description'		=> 'Give permission to user to access the Module Management area.'
 			],
 		 );
 

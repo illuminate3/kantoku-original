@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-		<title>Theme Management</title>
+		<title>Module Management</title>
 		<style>
 			body {
 				margin: 0;
@@ -41,7 +41,7 @@
 			<div class="content">
 				<div class="title">Kantoku</div>
 				<div class="quote">
-					Kantoku is a Rakko module that provides the ability to manage themes
+					Kantoku is a Rakko module that provides the ability to manage modules
 				</div>
 			</div>
 		</div>
