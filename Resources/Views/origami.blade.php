@@ -39,9 +39,9 @@
 	<body>
 		<div class="container">
 			<div class="content">
-				<div class="title">Origami</div>
+				<div class="title">Kantoku</div>
 				<div class="quote">
-					Origami is a Rakko module that provides the ability to manage themes
+					Kantoku is a Rakko module that provides the ability to manage themes
 				</div>
 			</div>
 		</div>

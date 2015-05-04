@@ -1,8 +1,8 @@
 {
-	"name": "Origami",
-	"slug": "origami",
+	"name": "Kantoku",
+	"slug": "kantoku",
 	"version": "1.0",
-	"description": "Theme Management for Rakko",
-	"enabled": true,
+	"description": "Module Management for Rakko",
+	"enabled": false,
 	"order": 0
 }

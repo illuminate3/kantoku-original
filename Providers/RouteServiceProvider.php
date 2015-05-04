@@ -1,5 +1,5 @@
 <?php
-namespace App\Modules\Origami\Providers;
+namespace App\Modules\Kantoku\Providers;
 
 use Illuminate\Routing\Router;
 use Caffeinated\Modules\Providers\RouteServiceProvider as ServiceProvider;
@@ -13,7 +13,7 @@ class RouteServiceProvider extends ServiceProvider
 	 *
 	 * @var string
 	 */
-	protected $namespace = 'App\Modules\Origami\Http\Controllers';
+	protected $namespace = 'App\Modules\Kantoku\Http\Controllers';
 
 	/**
 	 * Define your module's route model bindings, pattern filters, etc.
@@ -38,7 +38,7 @@ class RouteServiceProvider extends ServiceProvider
 	{
 		$router->group(['namespace' => $this->namespace], function($router)
 		{
-			require (config('modules.path').'/Origami/Http/routes.php');
+			require (config('modules.path').'/Kantoku/Http/routes.php');
 		});
 	}
 }

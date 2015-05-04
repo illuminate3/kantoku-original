@@ -1,12 +1,12 @@
 <?php
-namespace App\Modules\Origami\Providers;
+namespace App\Modules\Kantoku\Providers;
 
 use App\Providers\MenuServiceProvider;
 
 use Auth;
 use Menu;
 
-class OrigamiMenuProvider extends MenuServiceProvider {
+class KantokuMenuProvider extends MenuServiceProvider {
 
 	/**
 	 * Bootstrap any application services.

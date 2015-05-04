@@ -1,12 +1,12 @@
 <?php
-namespace App\Modules\Origami\Http\Controllers;
+namespace App\Modules\Kantoku\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Bus\DispatchesCommands;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 
-class OrigamiController extends Controller
+class KantokuController extends Controller
 {
 
 	use DispatchesCommands, ValidatesRequests;
@@ -36,7 +36,7 @@ class OrigamiController extends Controller
 	public function welcome()
 	{
 //dd("loaded");
-		return View('origami::origami');
+		return View('kantoku::kantoku');
 	}
 
 }

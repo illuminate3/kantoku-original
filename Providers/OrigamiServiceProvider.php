@@ -1,5 +1,5 @@
 <?php
-namespace App\Modules\Origami\Providers;
+namespace App\Modules\Kantoku\Providers;
 
 use App;
 use Config;
@@ -7,7 +7,7 @@ use Lang;
 use View;
 use Illuminate\Support\ServiceProvider;
 
-class OrigamiServiceProvider extends ServiceProvider
+class KantokuServiceProvider extends ServiceProvider
 {
 	/**
 	 * Register the Kagi module service provider.
@@ -17,11 +17,11 @@ class OrigamiServiceProvider extends ServiceProvider
 	public function register()
 	{
 
-		App::register('App\Modules\Origami\Providers\RouteServiceProvider');
-		App::register('App\Modules\Origami\Providers\OrigamiMenuProvider');
+		App::register('App\Modules\Kantoku\Providers\RouteServiceProvider');
+		App::register('App\Modules\Kantoku\Providers\KantokuMenuProvider');
 
 		$this->mergeConfigFrom(
-			__DIR__.'/../Config/origami.php', 'origami'
+			__DIR__.'/../Config/kantoku.php', 'kantoku'
 		);
 
 		$this->registerNamespaces();
@@ -32,14 +32,14 @@ class OrigamiServiceProvider extends ServiceProvider
 	}
 
 	/**
-	 * Register the module origami resource namespaces.
+	 * Register the module kantoku resource namespaces.
 	 *
 	 * @return void
 	 */
 	protected function registerNamespaces()
 	{
-//		Lang::addNamespace('origami', __DIR__.'/../Resources/Lang/');
-		View::addNamespace('origami', __DIR__.'/../Resources/Views/');
+//		Lang::addNamespace('kantoku', __DIR__.'/../Resources/Lang/');
+		View::addNamespace('kantoku', __DIR__.'/../Resources/Views/');
 	}
 
 	/**
@@ -50,7 +50,7 @@ class OrigamiServiceProvider extends ServiceProvider
 	public function boot()
 	{
 		$this->publishes([
-			__DIR__.'/../Config/origami.php' => config_path('origami.php'),
+			__DIR__.'/../Config/kantoku.php' => config_path('kantoku.php'),
 		]);
 	}
 
@@ -62,7 +62,7 @@ class OrigamiServiceProvider extends ServiceProvider
 /*
 	public function provides()
 	{
-		return ['origami'];
+		return ['kantoku'];
 	}
 */
 	/**
@@ -76,7 +76,7 @@ class OrigamiServiceProvider extends ServiceProvider
 		$this->registerInstallCommand();
 
 		$this->commands([
-			'origami.install'
+			'kantoku.install'
 		]);
 	}
 */
@@ -89,8 +89,8 @@ class OrigamiServiceProvider extends ServiceProvider
 /*
 	protected function registerInstallCommand()
 	{
-		$this->app->bindShared('origami.install', function() {
-			return new App\Modules\Origami\Console\Commands\OrigamiCommand;
+		$this->app->bindShared('kantoku.install', function() {
+			return new App\Modules\Kantoku\Console\Commands\KantokuCommand;
 		});
 	}
 */

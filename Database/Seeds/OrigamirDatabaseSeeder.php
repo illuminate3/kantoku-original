@@ -1,10 +1,10 @@
 <?php
-namespace App\Modules\Origami\Database\Seeds;
+namespace App\Modules\Kantoku\Database\Seeds;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
 
-class OrigamiDatabaseSeeder extends Seeder {
+class KantokuDatabaseSeeder extends Seeder {
 
 	/**
 	 * Run the database seeds.
@@ -16,7 +16,7 @@ class OrigamiDatabaseSeeder extends Seeder {
 
 		Model::unguard();
 
-		$this->call('App\Modules\Origami\Database\Seeds\ModuleSeeder');
+		$this->call('App\Modules\Kantoku\Database\Seeds\ModuleSeeder');
 
 	}
 

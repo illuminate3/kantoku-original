@@ -1,17 +1,17 @@
 <?php
-namespace App\Modules\Origami\Http\Controllers;
+namespace App\Modules\Kantoku\Http\Controllers;
 
 //use Illuminate\Http\Request;
-use App\Modules\Origami\Http\Requests\DeleteRequest;
-//use App\Modules\Origami\Http\Requests\ThemeCreateRequest;
-use App\Modules\Origami\Http\Requests\ThemeUpdateRequest;
+use App\Modules\Kantoku\Http\Requests\DeleteRequest;
+//use App\Modules\Kantoku\Http\Requests\ThemeCreateRequest;
+use App\Modules\Kantoku\Http\Requests\ThemeUpdateRequest;
 
 use Cache;
 use Config;
 use Flash;
 use Theme;
 
-class ThemesController extends OrigamiController {
+class ThemesController extends KantokuController {
 
 /*
 {!! Theme::asset('themeslug::css/bootstrap.css') !!}
@@ -72,7 +72,7 @@ Theme::view('modules.yourmodule.your.view')
 //
 // dd($themes);
 
-		return View('origami::themes.index',
+		return View('kantoku::themes.index',
 			compact(
 				'activeTheme',
 				'collection',
@@ -91,7 +91,7 @@ Theme::view('modules.yourmodule.your.view')
 	{
 dd("create");
 //		return view('kagi::users.create', $this->user->create());
-		return view('origami::modules.create');
+		return view('kantoku::modules.create');
 	}
 
 	/**
@@ -120,7 +120,7 @@ dd("store");
 	public function show($id)
 	{
 dd("show");
-		return View('origami::modules.show',  $this->module->show($id));
+		return View('kantoku::modules.show',  $this->module->show($id));
 	}
 
 	/**
@@ -133,7 +133,7 @@ dd("show");
 	{
 //dd("edit");
 //		$theme = $this->themeRepo->edit($slug);
-//		return View('origami::themes.edit',  $this->module->edit($id));
+//		return View('kantoku::themes.edit',  $this->module->edit($id));
 
 		$activeTheme				= Theme::getActive();
 		$slug						= Theme::getProperty( $theme . '::slug', trans('kotoba::general.error.no_data') . ':' . trans('kotoba::general.slug'));
@@ -150,7 +150,7 @@ dd("show");
 		}
 //dd($checked);
 
-		return View('origami::themes.edit',
+		return View('kantoku::themes.edit',
 			compact(
 				'activeTheme',
 				'checked',

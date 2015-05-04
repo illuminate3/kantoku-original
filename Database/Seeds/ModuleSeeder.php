@@ -1,5 +1,5 @@
 <?php
-namespace App\Modules\Origami\Database\Seeds;
+namespace App\Modules\Kantoku\Database\Seeds;
 
 use Illuminate\Database\Seeder;
 Use DB, Eloquent, Model, Schema;
@@ -11,10 +11,10 @@ class ModuleSeeder extends Seeder {
 
 // Module Information
 		$module = array(
-			'name'					=> 'Origami',
-			'slug'					=> 'origami',
+			'name'					=> 'Kantoku',
+			'slug'					=> 'kantoku',
 			'version'				=> '1.0',
-			'description'			=> 'Origami is a Rakko module that provides simple Theme Managent ability',
+			'description'			=> 'Kantoku is a Rakko module that provides simple Theme Managent ability',
 			'enabled'				=> 1,
 			'order'					=> 0
 		);
@@ -31,7 +31,7 @@ class ModuleSeeder extends Seeder {
 		$permissions = array(
 			[
 				'name'				=> 'Manage Themes',
-				'slug'				=> 'manage_origami',
+				'slug'				=> 'manage_kantoku',
 				'description'		=> 'Give permission to user to access the Theme Management area.'
 			],
 		 );

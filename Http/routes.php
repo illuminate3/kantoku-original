@@ -2,7 +2,7 @@
 
 /*
 |--------------------------------------------------------------------------
-| Origami Routes
+| Kantoku Routes
 |--------------------------------------------------------------------------
 |
 | Here is where you can register all of the routes for the module.
@@ -11,8 +11,8 @@
 |
 */
 
-Route::get('welcome/origami', array(
-	'uses'=>'OrigamiController@welcome'
+Route::get('welcome/kantoku', array(
+	'uses'=>'KantokuController@welcome'
 	));
 
 //Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function() {

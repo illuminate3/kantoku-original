@@ -1,5 +1,5 @@
 <?php
-namespace App\Modules\Origami\Http\Requests;
+namespace App\Modules\Kantoku\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Config;
