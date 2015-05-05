@@ -18,6 +18,7 @@
 $(document).ready(function() {
 oTable =
 	$('#table').DataTable({
+		"iDisplayLength": 25
 	});
 });
 @stop
@@ -58,12 +59,23 @@ oTable =
 				<td>{{ $module['slug'] }}</td>
 				<td>{{ $module['description'] }}</td>
 				<td>{{ $module['version'] }}</td>
-				<td>{{ $module['enabled'] }}</td>
+				<td>
+					{{-- $module['enabled'] --}}
+					@if ($module['enabled'] == true)
+						<span class="glyphicon glyphicon-ok text-success"></span>
+					@else
+						<span class="glyphicon glyphicon-remove text-danger"></span>
+					@endif
+				</td>
 				<td>{{ $module['order'] }}</td>
 				<td>
-					<a href="/admin/modules/{{ $module['slug'] }}" class="btn btn-primary" title="{{ trans('kotoba::button.edit') }}">
+					<a href="/admin/modules/{{ $module['slug'] }}" class="btn btn-success" title="{{ trans('kotoba::button.edit') }}">
 						<i class="fa fa-pencil fa-fw"></i>
 						{{ trans('kotoba::button.edit') }}
+					</a>
+					<a href="{{ URL::to('welcome/' . $module['slug'] . '/' ) }}" class="btn btn-info" >
+						<i class="fa fa-search fa-fw"></i>
+						{{ trans("kotoba::button.view") }}
 					</a>
 				</td>
 			</tr>
