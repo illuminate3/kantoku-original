@@ -35,7 +35,7 @@
 
 <div class="row">
 {!! Form::open([
-	'route' => array('modules.save', $slug)
+	'route' => array('modules.update', $slug)
 ]) !!}
 {{-- Form::hidden('activeModule', $activeModule) --}}
 
