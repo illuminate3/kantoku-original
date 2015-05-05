@@ -24,7 +24,7 @@ class KantokuController extends Controller
 		$this->middleware('auth');
 */
 //		$this->middleware('guest');
-		$this->middleware('admin');
+//		$this->middleware('admin');
 
 	}
 

@@ -32,8 +32,8 @@ Route::group(['prefix' => 'admin'], function() {
 		'uses'=>'ModulesController@edit'
 		));
 	Route::post('modules/{slug}', array(
-		'as'=>'modules.update',
-		'uses'=>'ModulesController@update'
+		'as'=>'modules.save',
+		'uses'=>'ModulesController@save'
 		));
 
 });

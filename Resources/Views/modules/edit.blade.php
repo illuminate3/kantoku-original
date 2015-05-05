@@ -35,7 +35,7 @@
 
 <div class="row">
 {!! Form::open([
-	'route' => array('modules.update', $slug)
+	'route' => array('modules.save', $slug)
 ]) !!}
 {{-- Form::hidden('activeModule', $activeModule) --}}
 
@@ -93,7 +93,7 @@
 
 <div class="row">
 <div class="col-sm-6">
-	<a href="/admin/thmese" class="btn btn-default btn-block" title="{{ trans('kotoba::button.cancel') }}">
+	<a href="/admin/modules" class="btn btn-default btn-block" title="{{ trans('kotoba::button.cancel') }}">
 		<i class="fa fa-times fa-fw"></i>
 		{{ trans('kotoba::button.cancel') }}
 	</a>

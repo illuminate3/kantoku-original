@@ -28,8 +28,8 @@ Module::view('modules.yourmodule.your.view')
 	public function __construct()
 	{
 // middleware
-		$this->middleware('auth');
-		$this->middleware('admin');
+// 		$this->middleware('auth');
+// 		$this->middleware('admin');
 	}
 
 	/**
@@ -183,12 +183,12 @@ dd("show");
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update(
+	public function save(
 		ModuleUpdateRequest $request,
 		$slug
 		)
 	{
-//dd($request);
+dd($slug);
 
 // 		$activeModule				= Module::getActive();
 		$name						= $request->name;
@@ -198,9 +198,11 @@ dd("show");
 		$enabled					= $request->enabled;
 		$order						= $request->order;
 
-		if ($slug != $activeModule && $enabled = 1) {
-			Module::setActive($slug);
-			Cache::forever('module', $slug);
+		if ( (Module::isDisabled($slug)) && ($enabled == 1)) {
+			Module::enable($slug);
+//			Cache::forever('module', $slug);
+		} else {
+			Module::disable($slug);
 		}
 
 		Module::setProperty( $slug . '::name', $name);
