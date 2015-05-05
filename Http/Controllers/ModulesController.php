@@ -183,12 +183,12 @@ dd("show");
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function save(
+	public function update(
 		ModuleUpdateRequest $request,
 		$slug
 		)
 	{
-dd($slug);
+//dd($slug);
 
 // 		$activeModule				= Module::getActive();
 		$name						= $request->name;
