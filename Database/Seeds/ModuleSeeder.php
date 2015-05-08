@@ -10,22 +10,22 @@ class ModuleSeeder extends Seeder {
 	{
 
 // Module Information
-		$module = array(
-			'name'					=> 'Kantoku',
-			'slug'					=> 'kantoku',
-			'version'				=> '1.0',
-			'description'			=> 'Kantoku is a Rakko module that provides simple Module Managent ability',
-			'enabled'				=> 1,
-			'order'					=> 0
-		);
-
-// Insert Module Information
-		if (Schema::hasTable('modules'))
-		{
-
-			DB::table('modules')->insert( $module );
-
-		}
+// 		$module = array(
+// 			'name'					=> 'Kantoku',
+// 			'slug'					=> 'kantoku',
+// 			'version'				=> '1.0',
+// 			'description'			=> 'Kantoku is a Rakko module that provides simple Module Managent ability',
+// 			'enabled'				=> 1,
+// 			'order'					=> 0
+// 		);
+//
+// // Insert Module Information
+// 		if (Schema::hasTable('modules'))
+// 		{
+//
+// 			DB::table('modules')->insert( $module );
+//
+// 		}
 
 // Permission Information
 		$permissions = array(
