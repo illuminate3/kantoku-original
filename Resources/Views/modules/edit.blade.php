@@ -2,7 +2,7 @@
 
 {{-- Web site Title --}}
 @section('title')
-{{ Lang::choice('kotoba::cms.module', 1) }} :: @parent
+{{ Lang::choice('kotoba::module.module', 1) }} :: @parent
 @stop
 
 @section('styles')
@@ -27,7 +27,7 @@
 	</a>
 	</p>
 	<i class="fa fa-edit fa-lg"></i>
-		{{ trans('kotoba::general.command.edit') }}:&nbsp;{{ Lang::choice('kotoba::cms.module', 1) }}
+		{{ trans('kotoba::general.command.edit') }}:&nbsp;{{ Lang::choice('kotoba::module.module', 1) }}
 	<hr>
 </h1>
 </div>
