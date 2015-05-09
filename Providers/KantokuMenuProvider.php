@@ -20,8 +20,8 @@ class KantokuMenuProvider extends MenuServiceProvider {
 //		$menu = Menu::get('navbar');
 
 // right side drop down
-		$menu = Menu::get('admin');
-		$menu->add('Modules', 'admin/modules');
+// 		$menu = Menu::get('admin');
+// 		$menu->add('Modules', 'admin/modules');
 
 	}
 
