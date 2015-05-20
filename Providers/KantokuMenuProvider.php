@@ -4,6 +4,7 @@ namespace App\Modules\Kantoku\Providers;
 use App\Providers\MenuServiceProvider;
 
 use Auth;
+use Lang;
 use Menu;
 
 class KantokuMenuProvider extends MenuServiceProvider {
