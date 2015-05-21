@@ -6,6 +6,8 @@ use Illuminate\Foundation\Bus\DispatchesCommands;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 
+use Theme;
+
 class KantokuController extends Controller
 {
 
@@ -36,7 +38,8 @@ class KantokuController extends Controller
 	public function welcome()
 	{
 //dd("loaded");
-		return View('kantoku::kantoku');
+		return Theme::View('modules.kantoku.kantoku');
+//		return View('kantoku::kantoku');
 	}
 
 }
