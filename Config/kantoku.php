@@ -1,16 +1,17 @@
 <?php
 
-return [
+// php artisan vendor:publish --provider="App\Modules\Kantoku\Providers\KantokuServiceProvider" --tag="config"
 
-//vendor:publish --provider="App\Modules\Kantoku\Providers\KantokuServiceProvider" --tag="config"
+
+return [
 
 /*
 |--------------------------------------------------------------------------
 | db settings
 |--------------------------------------------------------------------------
 */
-'kantoku_db' => array(
-	'prefix'					=> '',
-),
+// 'kantoku_db' => array(
+// 	'prefix'					=> '',
+// ),
 
 ];
