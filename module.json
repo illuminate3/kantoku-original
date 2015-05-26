@@ -3,6 +3,6 @@
 	"slug": "kantoku",
 	"version": "1.0",
 	"description": "Module Management for Rakko",
-	"enabled": true,
+	"enabled": false,
 	"order": 0
 }
