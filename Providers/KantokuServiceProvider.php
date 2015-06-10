@@ -18,7 +18,7 @@ class KantokuServiceProvider extends ServiceProvider
 	{
 
 		App::register('App\Modules\Kantoku\Providers\RouteServiceProvider');
-		App::register('App\Modules\Kantoku\Providers\KantokuMenuProvider');
+//		App::register('App\Modules\Kantoku\Providers\KantokuMenuProvider');
 
 		$this->mergeConfigFrom(
 			__DIR__.'/../Config/kantoku.php', 'kantoku'
